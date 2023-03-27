@@ -1,0 +1,15 @@
+{
+  "name": "infinitydreams",
+  "version": "1.0.0",
+  "description": "portfolio of me",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/mrmongkeyy/infinitydreams"
+  },
+  "author": "mrmongkeyy",
+  "license": "ISC"
+}
