@@ -106,8 +106,6 @@ module.exports = {
 							font-size:20px;
 						}
 						.insideright{
-							background:black;
-							color:white;
 							height:10%;
 							width:100%;
 							display:flex;
@@ -177,6 +175,12 @@ module.exports = {
 							max-width:50%;
 							padding:10px;
 						}
+						.topBorder{
+							border-top:2px solid black;
+						}
+						.bottomBorder{
+							border-bottom:2px solid black;
+						}
 						@media screen and (max-width:532px){
 							.left{
 								width:100%;
@@ -197,7 +201,7 @@ module.exports = {
 							.insideright #copy{
 								display:inline-block;
 								width:100%;
-								text-align:left;
+								text-align:center;
 								font-size:12px;
 								padding:12px;
 							}

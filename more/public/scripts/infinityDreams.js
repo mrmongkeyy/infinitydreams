@@ -33,7 +33,7 @@ const infinityDreams = {
 					<div id=titleMobile>
 						<span>InfinityDreams</span>
 					</div>
-					<div class='insideright desktopmenu'>
+					<div class='insideright desktopmenu bottomBorder'>
 						<nav>
 							<div>
 								<span>About me</span>
@@ -48,7 +48,7 @@ const infinityDreams = {
 								<span>Anouncement</span>
 							</div>
 							<div>
-								<span><a href=https://saweria.co/mrmongkeyy style=color:white>Donasi</a></span>
+								<span><a href=https://saweria.co/mrmongkeyy style=color:brown>Donasi</a></span>
 							</div>
 						</nav>
 					</div>
@@ -142,7 +142,7 @@ const infinityDreams = {
 							</div>
 						</div>
 					</div>
-					<div class=insideright>
+					<div class="insideright topBorder">
 						<div id=copy>
 							<span>&copy 2023. MRMONGKEYY</span>
 						</div>
