@@ -335,7 +335,7 @@ const infinityDreams = {
 					<div>
 						<div>
 							Nama saya gema. Saya seorang game developer, dan juga software enginer.
-							Programming language kesukaan saya adalah Javascript. Belajar coding 2 tahun. Saya ngerti C++, PHP, Javascript, GD script, HTML, CSS, NodeJs.
+							Programming language kesukaan saya adalah Javascript. Belajar coding 2 tahun. Saya ngerti C++, PHP, Javascript, GD script, HTML, CSS, NodeJs, and Python tentu saja.
 							Yang saya suka dari coding adalah design data struktur, flow app, dan debuging. Semuanya mengimvrove cara berfikir. Saya akan terus belajar!
 						</div>
 						<div style=margin-top:20px;text-align:center;>
