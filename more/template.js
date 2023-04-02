@@ -72,7 +72,7 @@ module.exports = {
 							padding:5px ;
 							display:inline-block;
 							color:black;
-							background:white;
+							background:yellow;
 							padding:1px;
 						}
 						.bigfont{
