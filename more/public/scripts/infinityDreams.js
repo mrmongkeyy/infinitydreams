@@ -366,9 +366,9 @@ const infinityDreams = {
 							HUBUNGI SAYA DI:
 						</div>
 						<div style=display:flex;flex-direction:column;>
-							<div>GITHUB: github.com/mrmongkeyy</div>
-							<div>GMAIL: MRMONGKEYY@GMAIL.COM</div>
-							<div>WA: 0895605801484</div>
+							<div>GITHUB: <span style=background:yellow>github.com/mrmongkeyy</span></div>
+							<div>GMAIL: <span style=background:yellow>MRMONGKEYY@GMAIL.COM</span></div>
+							<div>WA: <span style=background:yellow>0895605801484</span></div>
 						</div>
 						<div style=margin-top:20px;text-align:center;>
 							Klik layar untuk menutup
@@ -395,7 +395,7 @@ const infinityDreams = {
 				innerHTML:`
 					<div>
 						<div>
-							Saya menulis artikel di hellodolphin.<br>Kamu juga bisa melakukannya.
+							Saya menulis artikel di <span style=background:yellow>hellodolphin.</span><br>Kamu juga bisa melakukannya.
 						</div>
 						<div style=margin-top:20px;text-align:center;>
 							Klik layar untuk menutup
