@@ -141,6 +141,17 @@ const infinityDreams = {
 								<span>FARAWAY!</span>
 							</div>
 						</div>
+						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+							<div>
+								<span>JS/NodeJs</span>
+							</div>
+							<span>
+								<img src=./file?fn=nontonajaudah.png>
+							</span>
+							<div>
+								<span>NontonAjaUdah</span>
+							</div>
+						</div>
 					</div>
 					<div class="insideright topBorder">
 						<div id=copy>
@@ -244,6 +255,14 @@ const infinityDreams = {
 				description:`
 					JS game shooting gun game, di bangun dengan library game saya sendiri. BananaConsole.
 				`
+			},
+			{
+				displayed:false,
+				title:'NontonAjaUdah',
+				language:'JS/NodeJs',
+				description:`
+					Web streaming movie, hasil belajar scrapping data.
+				`
 			}
 		];
 		const display = function(index,dir){
@@ -293,6 +312,7 @@ const infinityDreams = {
 				'https://github.com/mrmongkeyy/bananaconsole',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/infinityRoads',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/faraway',
+				'https://nontonajaudah.cyclic.app'
 			];
 			location.href = hreflist[index];
 		}
