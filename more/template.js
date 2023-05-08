@@ -16,12 +16,12 @@ module.exports = {
 							font-family:goodone;
 							user-select:none;
 							-webkit-tap-highlight-color:transparent;
+							margin:0;
 						}
 						.side{
 							position:absolute;
 							top:0;
 							height:100%;
-							background:white;
 							display:flex;
 							flex-direction:column;
 						}
@@ -35,12 +35,11 @@ module.exports = {
 						}
 						.left img{
 							width:50%;
-
+							opacity:1;
 						}
 						.right{
 							right:0;
 							width:70%;
-							background:white;
 							display:flex;
 							flex-direction:column;
 							font-weight:bold;
@@ -61,7 +60,6 @@ module.exports = {
 							justify-content:center;
 							align-items:center;
 							padding:10px;
-							border-radius:10px;
 						}
 						.container div{
 							text-align:center;
@@ -72,8 +70,8 @@ module.exports = {
 							padding:5px ;
 							display:inline-block;
 							color:black;
-							background:yellow;
 							padding:1px;
+							background:#ffb893;
 						}
 						.bigfont{
 							font-size:25px;
@@ -101,6 +99,7 @@ module.exports = {
 						.insideleft .container:hover span img{
 							width:210px;
 							height:210px;
+							opacity:1;
 						}
 						.container #title{
 							font-size:20px;
@@ -130,9 +129,9 @@ module.exports = {
 							text-decoration:underline;
 						}
 						span img{
-							border-radius:50%;
 							padding:20px;
-							border:1px solid black;
+							background:#ffffff45;
+							opacity:.6;
 						}
 						.selected{
 							text-decoration:underline;
@@ -208,6 +207,7 @@ module.exports = {
 							.insideright{
 								overflow:auto;
 								justify-content:flex-start;
+								background:#ffffffc2;
 							}
 							.insideright nav div{
 								padding:0 10px 0 10px;
@@ -220,6 +220,12 @@ module.exports = {
 								height:100%;
 							}
 							.box-flex{
+								width:100%;
+							}
+							.container{
+								width:80%;
+							}
+							.container img{
 								width:100%;
 							}
 						}

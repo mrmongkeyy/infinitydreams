@@ -3,15 +3,29 @@ const infinityDreams = {
 	pageSetup(){
 		const main = makeElement('main',{
 			innerHTML:`
+				<img src=/file?fn=mountains-55067.png
+				style="
+					width:100%;
+					height:100%;
+					object-fit:cover;
+					position:absolute;
+				"
+				>
 				<div class='side left'>
 					<div class=container style=border:none;background:none;>
-						<div style=font-weight:bold;background:white; id=title>
+						<div style=font-weight:bold; id=title>
 							<span>"InfiniyDreams"</span>
 						</div>
 					</div>
-					<div class=container style=background:none;border:none;>
+					<div class=container style=background:none;border:none;margin:0;>
 						<span>
-							<img src=/file?fn=profile.png>
+							<img src=/file?fn=profile.jpg
+							style="
+								width:200px;
+								height:250px;
+								object-fit:cover;
+							"
+							>
 						</span>
 						<div>
 							<span>CEO/CTO</span>
@@ -24,7 +38,7 @@ const infinityDreams = {
 						</div>
 					</div>
 					<div class=container style=border:none;background:none;>
-						<div style=font-size:15px;font-weight:bold;background:white;>
+						<div style=font-size:15px;font-weight:bold;>
 							<span>MRMONGKEYY &COPY2023.</span>
 						</div>
 					</div>
@@ -152,6 +166,28 @@ const infinityDreams = {
 								<span>NontonAjaUdah</span>
 							</div>
 						</div>
+						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+							<div>
+								<span>JS/NodeJs</span>
+							</div>
+							<span>
+								<img src=./file?fn=ngomikajaudah.png>
+							</span>
+							<div>
+								<span>NgomikAjaUdah</span>
+							</div>
+						</div>
+						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+							<div>
+								<span>JS/NodeJs</span>
+							</div>
+							<span>
+								<img src=./file?fn=metadope.png>
+							</span>
+							<div>
+								<span>MetaDope</span>
+							</div>
+						</div>
 					</div>
 					<div class="insideright topBorder">
 						<div id=copy>
@@ -263,6 +299,22 @@ const infinityDreams = {
 				description:`
 					Web streaming movie, hasil belajar scrapping data.
 				`
+			},
+			{
+				displayed:false,
+				title:'NgomikAjaUdah',
+				language:'JS/NodeJs',
+				description:`
+					Web Reading Anime, hasil belajar scrapping data.
+				`
+			},
+			{
+				displayed:false,
+				title:'NontonAjaUdah',
+				language:'JS/NodeJs',
+				description:`
+					Web online suits game multiplayer, hasil belajar firebase.
+				`
 			}
 		];
 		const display = function(index,dir){
@@ -281,7 +333,7 @@ const infinityDreams = {
 						align-items:center;
 						min-height:20%;
 						${dir}:0;
-						background:white;
+						background:#ffffffc2;
 						border:1px solid black;
 						display:flex;
 						justify-content:center;
