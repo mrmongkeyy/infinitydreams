@@ -364,7 +364,9 @@ const infinityDreams = {
 				'https://github.com/mrmongkeyy/bananaconsole',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/infinityRoads',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/faraway',
-				'https://nontonajaudah.cyclic.app'
+				'https://nontonajaudah.cyclic.app',
+				'https://ngomikajaudah.cyclic.app',
+				'https://metadope.cyclic.app'
 			];
 			location.href = hreflist[index];
 		}
