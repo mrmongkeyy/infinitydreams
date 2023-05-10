@@ -3,7 +3,7 @@ const infinityDreams = {
 	pageSetup(){
 		const main = makeElement('main',{
 			innerHTML:`
-				<img src=/file?fn=mountains-55067.png
+				<img src=/file?fn=mountain-gfa31aa278_1920.jpg
 				style="
 					width:100%;
 					height:100%;
@@ -28,7 +28,7 @@ const infinityDreams = {
 							>
 						</span>
 						<div>
-							<span>CEO/CTO</span>
+							<span>CEO & CTO</span>
 						</div>
 						<div class=bigfont>
 							<span>GEMA/MRMONGKEYY</span>
@@ -334,11 +334,10 @@ const infinityDreams = {
 						min-height:20%;
 						${dir}:0;
 						background:#ffffffc2;
-						border:1px solid black;
 						display:flex;
 						justify-content:center;
 						flex-direction:column;
-						padding:10px;
+						padding:20px;
 						margin:10px;
 					`,
 					innerHTML:`
@@ -409,7 +408,7 @@ const infinityDreams = {
 					<div>
 						<div>
 							Nama saya gema. Saya seorang game developer, dan juga software enginer.
-							Programming language kesukaan saya adalah Javascript. Belajar coding 2 tahun. Saya ngerti <span style=background:yellow>C++</span>, <span style=background:yellow>PHP</span>, <span style=background:yellow>Javascript</span>, <span style=background:yellow>GD script</span>, <span style=background:yellow>HTML</span>, <span style=background:yellow>CSS</span>, <span style=background:yellow>NodeJs</span>, and <span style=background:yellow>Python</span> tentu saja.
+							Programming language kesukaan saya adalah Javascript. Belajar coding 2 tahun. Saya bisa <span style=background:yellow>C++</span>, <span style=background:yellow>PHP</span>, <span style=background:yellow>Javascript</span>, <span style=background:yellow>GD script</span>, <span style=background:yellow>HTML</span>, <span style=background:yellow>CSS</span>, <span style=background:yellow>NodeJs</span>, and <span style=background:yellow>Python</span> tentu saja.
 							Yang saya suka dari coding adalah design data struktur, flow app, dan debuging. Semuanya mengimprove cara berfikir. Saya akan terus belajar!
 						</div>
 						<div style=margin-top:20px;text-align:center;>
@@ -435,14 +434,31 @@ const infinityDreams = {
 			const box = makeElement('div',{
 				className:'box-flex flex',
 				innerHTML:`
-					<div>
+					<div style=width:100%;>
 						<div style=margin-bottom:20px;>
 							HUBUNGI SAYA DI:
 						</div>
 						<div style=display:flex;flex-direction:column;>
-							<div>GITHUB: <span style=background:yellow>github.com/mrmongkeyy</span></div>
-							<div>GMAIL: <span style=background:yellow>MRMONGKEYY@GMAIL.COM</span></div>
-							<div>WA: <span style=background:yellow>0895605801484</span></div>
+							<div
+							style="
+								margin-bottom:10px;
+								display:flex;
+								justify-content:space-between;
+							"
+							><span>GITHUB</span><span style=background:yellow>github.com/mrmongkeyy</span></div>
+							<div
+							style="
+								margin-bottom:10px;
+								display:flex;
+								justify-content:space-between;
+							"
+							><span>GMAIL</span><span style=background:yellow>MRMONGKEYY@GMAIL.COM</span></div>
+							<div
+							style="
+								display:flex;
+								justify-content:space-between;
+							"
+							><span>WA</span><span style=background:yellow>0895605801484</span></div>
 						</div>
 						<div style=margin-top:20px;text-align:center;>
 							Klik layar untuk menutup

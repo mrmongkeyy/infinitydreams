@@ -12,6 +12,9 @@ module.exports = {
 							font-family:'goodone';
 							src:url('/file?fn=sonosecond.ttf');
 						}
+						::-webkit-scrollbar{
+							width:0;
+						}
 						body{
 							font-family:goodone;
 							user-select:none;
@@ -36,6 +39,8 @@ module.exports = {
 						.left img{
 							width:50%;
 							opacity:1;
+							padding-top:0;
+							padding-bottom:0;
 						}
 						.right{
 							right:0;
@@ -71,7 +76,7 @@ module.exports = {
 							display:inline-block;
 							color:black;
 							padding:1px;
-							background:#ffb893;
+							background:#e4dfd9;
 						}
 						.bigfont{
 							font-size:25px;
@@ -85,6 +90,7 @@ module.exports = {
 							flex-direction:row;
 							align-items:center;
 							justify-content:space-between;
+							scrollbar-width:none;
 						}
 						.insideleft span img{
 							width:200px;
@@ -171,14 +177,8 @@ module.exports = {
 						}
 						.box-flex{
 							background:white;
-							max-width:50%;
-							padding:10px;
-						}
-						.topBorder{
-							border-top:2px solid black;
-						}
-						.bottomBorder{
-							border-bottom:2px solid black;
+							padding:20px;
+							width:30%;
 						}
 						@media screen and (max-width:532px){
 							.left{
@@ -241,7 +241,7 @@ module.exports = {
 								height:80%;
 							}
 							.box-flex{
-								max-width:100%;
+								width:100%;
 							}
 						}
 					</style>
