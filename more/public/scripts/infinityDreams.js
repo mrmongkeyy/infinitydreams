@@ -333,7 +333,7 @@ const infinityDreams = {
 						align-items:center;
 						min-height:20%;
 						${dir}:0;
-						background:#ffffffc2;
+						background:white;
 						display:flex;
 						justify-content:center;
 						flex-direction:column;
@@ -344,6 +344,7 @@ const infinityDreams = {
 						<div style=margin-bottom:10px;>${content.title} {${content.language}}</div>
 						<div class=smallfont>${content.description}</div>
 						<div style=margin-top:10px;>KLIK UNTUK MELIHAT LEBIH</div>
+						<div style=margin-top:10px;>SHIFT + MouseRoll To Scrolling Content!</div>
 					`
 				});
 				find('.insideleft').appendChild(bound);
