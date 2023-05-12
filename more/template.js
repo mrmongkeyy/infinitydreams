@@ -39,8 +39,6 @@ module.exports = {
 						.left img{
 							width:50%;
 							opacity:1;
-							padding-top:0;
-							padding-bottom:0;
 						}
 						.right{
 							right:0;

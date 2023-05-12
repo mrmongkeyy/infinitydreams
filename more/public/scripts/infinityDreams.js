@@ -19,11 +19,12 @@ const infinityDreams = {
 					</div>
 					<div class=container style=background:none;border:none;margin:0;>
 						<span>
-							<img src=/file?fn=profile.jpg
+							<img src=/file?fn=goodprofile.png
 							style="
 								width:200px;
-								height:250px;
+								height:200px;
 								object-fit:cover;
+								border-radius:50%;
 							"
 							>
 						</span>
