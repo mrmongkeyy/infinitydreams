@@ -200,6 +200,17 @@ const infinityDreams = {
 								<span>MasBroOnlineOrder</span>
 							</div>
 						</div>
+						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+							<div>
+								<span>JS/NodeJs</span>
+							</div>
+							<span>
+								<img src=./file?fn=akaraservices.png>
+							</span>
+							<div>
+								<span>AKARA</span>
+							</div>
+						</div>
 					</div>
 					<div class="insideright topBorder">
 						<div id=copy>
@@ -335,6 +346,14 @@ const infinityDreams = {
 				description:`
 					Aplikasi Online Order, yang bisa Compatible dengan semua bisnis bertipe online.
 				`
+			},
+			{
+				displayed:false,
+				title:'Akara',
+				language:'JS/NodeJs',
+				description:`
+					Aplikasi Online Order, yang diemplemenatasikan ke Usaha Servis elektronik.
+				`
 			}
 		];
 		const display = function(index,dir){
@@ -387,7 +406,8 @@ const infinityDreams = {
 				'https://nontonajaudah.cyclic.app',
 				'https://ngomikajaudah.cyclic.app',
 				'https://metadope.cyclic.app',
-				'https://masbroprinting.cyclic.app'
+				'https://masbroprinting.cyclic.app',
+				'https://servicesakara.cyclic.app'
 			];
 			location.href = hreflist[index];
 		}
