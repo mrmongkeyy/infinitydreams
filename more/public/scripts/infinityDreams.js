@@ -3,7 +3,7 @@ const infinityDreams = {
 	pageSetup(){
 		const main = makeElement('main',{
 			innerHTML:`
-				<img src=/file?fn=mountain-gfa31aa278_1920.jpg
+				<img src=/file?fn=keyboard-gca66a7304_1920.jpg
 				style="
 					width:100%;
 					height:100%;

@@ -10,7 +10,7 @@ module.exports = {
 					<style>
 						@font-face{
 							font-family:'goodone';
-							src:url('/file?fn=sonosecond.ttf');
+							src:url('/file?fn=Titillium-Regular.otf');
 						}
 						::-webkit-scrollbar{
 							width:0;
@@ -73,8 +73,8 @@ module.exports = {
 							padding:5px ;
 							display:inline-block;
 							color:black;
-							padding:1px;
-							background:#e4dfd9;
+							background:white;
+							border-radius:20px;
 						}
 						.bigfont{
 							font-size:25px;
