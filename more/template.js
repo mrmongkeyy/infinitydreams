@@ -72,8 +72,8 @@ module.exports = {
 						.container div span{
 							padding:5px ;
 							display:inline-block;
-							color:black;
-							background:white;
+							color:white;
+							background:none;
 						}
 						.bigfont{
 							font-size:25px;
