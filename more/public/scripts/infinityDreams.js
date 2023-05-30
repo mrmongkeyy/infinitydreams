@@ -4,7 +4,7 @@ class Circle{
 	speed=null;
 	dir={x:1,y:1};
 	ctx=null;
-	color='red';
+	color='blue';
 	constructor(config){
 		Object.assign(this,config);
 		this.init();
