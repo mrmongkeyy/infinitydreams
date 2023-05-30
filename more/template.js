@@ -20,32 +20,32 @@ module.exports = {
 							user-select:none;
 							-webkit-tap-highlight-color:transparent;
 							margin:0;
+							font-weight:normal;
 						}
 						.side{
 							position:absolute;
 							top:0;
 							height:100%;
-							display:flex;
-							flex-direction:column;
+							width:100%;
 						}
 						.left{
 							left:0;
-							width:30%;
+							width:100%;
 							display:flex;
-							align-items:center;
-							justify-content:center;
 							color:white;
+							height:100%;
+							flex-direction:column;
+							align-items:flex-start;
 						}
 						.left img{
 							width:50%;
-							opacity:1;
 						}
 						.right{
-							right:0;
-							width:70%;
-							display:flex;
+							width:96%;
 							flex-direction:column;
-							font-weight:bold;
+							align-items:center;
+							display:flex;
+							padding:2%;
 						}
 						.container{
 							margin:20px;
@@ -72,36 +72,37 @@ module.exports = {
 						.container div span{
 							padding:5px ;
 							display:inline-block;
-							color:white;
-							background:none;
+							color:black;
+							border-radius:20px 0 20px 0;
 						}
 						.bigfont{
 							font-size:25px;
-							font-weight:bold;
 						}
 						.insideleft{
 							height:80%;
-							width:100%;
+							width:50%;
 							display:flex;
 							overflow:auto;
 							flex-direction:row;
 							align-items:center;
 							justify-content:space-between;
 							scrollbar-width:none;
+							background:white;
+							border-radius:10px;
+							box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 						}
 						.insideleft span img{
-							width:200px;
-							height:200px;
+							width:100%;
+							height:100%;
 							background:white;
 							padding:5px;
 							object-fit:cover;
+							box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 						}
 						.insideleft .container:hover span{
 							padding:none;
 						}
 						.insideleft .container:hover span img{
-							width:210px;
-							height:210px;
 							opacity:1;
 						}
 						.container #title{
@@ -109,11 +110,11 @@ module.exports = {
 						}
 						.insideright{
 							height:10%;
-							width:100%;
+							width:50%;
 							display:flex;
 							flex-direction:row;
 							align-items:center;
-							justify-content:flex-end;
+							justify-content:flex-start;
 						}
 						.insideright nav{
 							display:flex;
@@ -123,7 +124,6 @@ module.exports = {
 						.insideright nav div{
 							padding: 20px 0 20px 0;
 							font-size:15px;
-							font-weight:bold;
 							cursor:pointer;
 							text-align:center;
 							padding:10px;
@@ -132,9 +132,8 @@ module.exports = {
 							text-decoration:underline;
 						}
 						span img{
-							padding:20px;
-							background:#ffffff45;
-							opacity:.6;
+							padding:2px;
+							background:black;
 						}
 						.selected{
 							text-decoration:underline;
@@ -146,9 +145,10 @@ module.exports = {
 							display:none;
 						}
 						#titleMobile{
-							display:none;
 							text-align:center;
 							padding:10px;
+							position:sticky;
+							top:0;
 						}
 						.smallfont{
 							font-weight:normal;
@@ -160,7 +160,11 @@ module.exports = {
 							left:0;
 							width:100%;
 							height:100%;
-							background:RGB(0,0,0,0.5);
+							background:RGB(255,255,255,0.6);
+						}
+						.bound .box-flex{
+							border-radius:10px;
+							box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 						}
 						.flex{
 							display:flex;
@@ -180,19 +184,22 @@ module.exports = {
 						@media screen and (max-width:532px){
 							.left{
 								width:100%;
-								display:none;
 							}
 							.left #title{
 								font-size:10px;
 							}
 							.right{
 								width:100%;
+								padding:0;
 							}
 							.insideleft{
 								flex-direction:column;
+								width:95%;
+							}
+							.insideright{
+								width:95%;
 							}
 							.insideleft .container{
-								padding:100px 0 100px 0;
 							}
 							.insideright #copy{
 								display:inline-block;
@@ -246,6 +253,11 @@ module.exports = {
 				<body></body>
 				<script src=/scripts?fn=infinity></script>
 				<script src=/scripts?fn=infinityDreams></script>
+				<script>
+					window.onresize = ()=>{
+						location.reload();
+					}
+				</script>
 			</html>
 		`;
 	}

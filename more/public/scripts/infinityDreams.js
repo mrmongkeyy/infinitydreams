@@ -1,54 +1,136 @@
+class Circle{
+	position={x:0,y:0};
+	size=null;
+	speed=null;
+	dir={x:1,y:1};
+	ctx=null;
+	color='red';
+	constructor(config){
+		Object.assign(this,config);
+		this.init();
+	}
+	init(){
+		this.setSize();
+		this.speedX = Math.random()-0.5;
+		this.speedY = Math.random()-0.5;
+		this.position = {
+			x:this.canvas.width/2,
+			y:this.canvas.height/2
+		}
+		this.sizegonevalue = this.size*0.01*-1;
+	}
+	update(){
+		this.move();
+		this.draw();
+		this.goneprocess();
+	}
+	move(){
+		this.position.x += this.speedX;
+		this.position.y += this.speedY;
+		this.bounding();
+	}
+	setSize(){this.size = Math.random()*10+20}
+	bounding(){
+		if(this.position.x+this.size/2 > this.canvas.width*0.75 || this.position.x-this.size/2<this.canvas.width*0.25)this.speedX *= -1;
+		if(this.position.y+this.size/2 > this.canvas.height || this.position.y-this.size/2<0)this.speedY *= -1;
+	}
+	goneprocess(){
+		if(this.size+this.sizegonevalue>0)this.size+=this.sizegonevalue;
+		else this.size = 0;
+		
+		if(this.size < 12 || this.size>30){
+			this.sizegonevalue*=-1;
+		}
+	}
+	draw(){
+		this.ctx.beginPath();
+		//styling the circle.
+		this.ctx.fillStyle = this.color;
+		this.ctx.arc(this.position.x,this.position.y,this.size,0,Math.PI*2);
+		this.ctx.fill();
+	}
+}
 
 const infinityDreams = {
 	pageSetup(){
 		const main = makeElement('main',{
 			innerHTML:`
-				<img src=/file?fn=cup-of-coffee-1280537_1920.jpg
-				style="
-					width:100%;
-					height:100%;
-					object-fit:cover;
-					position:absolute;
-				"
-				>
-				<div class='side left'>
-					<div class=container style=border:none;background:none;>
-						<div style=font-weight:bold; id=title>
-							<span>"InfiniyDreams"</span>
-						</div>
-					</div>
-					<div class=container style=background:none;border:none;margin:0;>
-						<span>
-							<img src=/file?fn=goodprofile.png
+				<div class='left' id=profileview>
+					<div
+						style="
+							width:100%;
+							height:100%;
+						"
+						>
+							<canvas
 							style="
-								width:200px;
-								height:200px;
-								object-fit:cover;
-								border-radius:50%;
+								width:100%;
+								height:100%;
+								background:white;
+								filter:blur(15px) contrast(15);
 							"
-							>
-						</span>
-						<div>
-							<span>CEO & CTO</span>
+							></canvas>
 						</div>
-						<div class=bigfont>
-							<span>GEMA/MRMONGKEYY</span>
-						</div>
-						<div>
-							<span>"Cause Mydream Must Be Reality"</span>
-						</div>
-					</div>
-					<div class=container style=border:none;background:none;>
-						<div style=font-size:15px;font-weight:bold;>
-							<span>MRMONGKEYY &COPY2023.</span>
-						</div>
+					<div id=whitebox
+					style="
+						border-radius:20px;
+						display:flex;
+						justify-content:center;
+						height:100%;
+						position:absolute;
+						width:100%;
+					"
+					>
+						<div class=container style=background:none;border:none;margin:0;>
+							<span>
+								<img src=/file?fn=betterprofile.png
+								style="
+									width:200px;
+									height:200px;
+									object-fit:cover;
+									border-radius:50%;
+									box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
+								"
+								>
+							</span>
+							<div>
+								<span>CEO & CTO of InfinityDreams</span>
+							</div>
+							<div class=bigfont>
+								<span>GEMA/MRMONGKEYY</span>
+							</div>
+							<div>
+								<span
+								style="background:none;"
+								>"Cause Mydream Must Be Reality"</span>
+							</div>
+							<div>
+								<span
+								style="
+									background:red;
+									padding:20px;
+									color:white;
+									border:2px solid black;
+									box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
+								"
+								id=seemoreproject
+								>
+									Lihat Project Saya
+								</span>
+							</div>
+						</div></div>
 					</div>
 				</div>
-				<div class='side right'>
-					<div id=titleMobile>
-						<span>InfinityDreams</span>
-					</div>
-					<div class='insideright desktopmenu bottomBorder'>
+				<div class='right' id=projectview>
+					<div class='insideright desktopmenu bottomBorder'
+					style="
+						position:sticky;top:0;
+						overflow:auto;
+					"
+					>
+						<div id=titleMobile>
+							<span>InfinityDreams</span>
+						</div>
 						<nav>
 							<div>
 								<span>About me</span>
@@ -68,7 +150,7 @@ const infinityDreams = {
 						</nav>
 					</div>
 					<div class=insideleft>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none; for=hellodolphin>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none; for=hellodolphin>
 							<div>
 								<span>Javascript/PHP</span>
 							</div>
@@ -79,7 +161,7 @@ const infinityDreams = {
 								<span>Hellodolphin</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript/PHP</span>
 							</div>
@@ -90,7 +172,7 @@ const infinityDreams = {
 								<span>Quizyzz</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript/NodeJs</span>
 							</div>
@@ -101,7 +183,7 @@ const infinityDreams = {
 								<span>MrX</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript</span>
 							</div>
@@ -112,7 +194,7 @@ const infinityDreams = {
 								<span>GAMASTUDIO</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Godot GDScript</span>
 							</div>
@@ -123,7 +205,7 @@ const infinityDreams = {
 								<span>EaglesWar</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript</span>
 							</div>
@@ -134,7 +216,7 @@ const infinityDreams = {
 								<span>JS Game engine library</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript</span>
 							</div>
@@ -145,7 +227,7 @@ const infinityDreams = {
 								<span>INFINITYROADS</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>Javascript</span>
 							</div>
@@ -156,7 +238,7 @@ const infinityDreams = {
 								<span>FARAWAY!</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>JS/NodeJs</span>
 							</div>
@@ -167,7 +249,7 @@ const infinityDreams = {
 								<span>NontonAjaUdah</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>JS/NodeJs</span>
 							</div>
@@ -178,7 +260,7 @@ const infinityDreams = {
 								<span>NgomikAjaUdah</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>JS/NodeJs</span>
 							</div>
@@ -189,7 +271,7 @@ const infinityDreams = {
 								<span>MetaDope</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>JS/NodeJs</span>
 							</div>
@@ -200,7 +282,7 @@ const infinityDreams = {
 								<span>MasBroOnlineOrder</span>
 							</div>
 						</div>
-						<div class=container style=background:white;height:100px;width:200px;border:none;background:none;>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
 							<div>
 								<span>JS/NodeJs</span>
 							</div>
@@ -221,9 +303,15 @@ const infinityDreams = {
 				<div class=pop>
 					
 				</div>
-			`
+			`,
+			onadded(){
+				find('#seemoreproject').onclick = ()=>{
+					find('#projectview').scrollIntoView({behavior:'smooth'});
+				}
+			}
 		});
 		document.body.appendChild(main);
+		main.onadded();
 	},
 	init(){
 		this.pageSetup();
@@ -378,6 +466,7 @@ const infinityDreams = {
 						flex-direction:column;
 						padding:20px;
 						margin:10px;
+						box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 					`,
 					innerHTML:`
 						<div style=margin-bottom:10px;>${content.title} {${content.language}}</div>
@@ -426,10 +515,6 @@ const infinityDreams = {
 					if(find('.insideleft').querySelector('#bound'))find('.insideleft').querySelector('#bound').remove();
 				}
 			}
-			div.ontouchstart = checkEvent
-			div.onmouseover = checkEvent;
-			div.onmouseout = releaseEvent;
-			div.ontouchend = releaseEvent;
 			div.onclick = function(){
 				click(this.index);
 			}
@@ -463,6 +548,10 @@ const infinityDreams = {
 			bound.appendChild(box);
 			if(!find('body #bound')){
 				find('body').appendChild(bound);
+				find('#profileview').scrollIntoView();
+				setTimeout(()=>{
+					document.onscroll = (e)=>{bound.remove();document.onscroll=null};
+				},500)
 			}
 		},
 		contact(){
@@ -512,6 +601,10 @@ const infinityDreams = {
 			bound.appendChild(box);
 			if(!find('body #bound')){
 				find('body').appendChild(bound);
+				find('#profileview').scrollIntoView();
+				setTimeout(()=>{
+					document.onscroll = (e)=>{bound.remove();document.onscroll=null};
+				},500)
 			}
 		},
 		articles(){
@@ -539,6 +632,10 @@ const infinityDreams = {
 			bound.appendChild(box);
 			if(!find('body #bound')){
 				find('body').appendChild(bound);
+				find('#profileview').scrollIntoView();
+				setTimeout(()=>{
+					document.onscroll = (e)=>{bound.remove();document.onscroll=null};
+				},500)
 			}
 		},
 		anouncement(){
@@ -566,8 +663,42 @@ const infinityDreams = {
 			bound.appendChild(box);
 			if(!find('body #bound')){
 				find('body').appendChild(bound);
+				find('#profileview').scrollIntoView();
+				setTimeout(()=>{
+					document.onscroll = (e)=>{bound.remove();document.onscroll=null};
+				},500)
 			}
 		}
 	}
 }
 infinityDreams.init();
+
+const canvas = document.querySelector('canvas');
+Object.assign(canvas,{
+	width:innerWidth*.5,
+	height:innerHeight*.5
+});
+const c = canvas.getContext('2d');
+
+
+
+let bubbles = [];
+const init = function(bubbleLen){
+	for(let i=0;i<bubbleLen;i++){
+		bubbles.push(new Circle({
+			ctx:c,
+			canvas
+		}))
+	}
+	process();
+}
+
+const process = function(){
+	//clearing the canvas.
+	c.clearRect(0,0,canvas.width,canvas.height);
+	bubbles.forEach(bubble=>{
+		bubble.update();
+	})
+	requestAnimationFrame(process);
+}
+init(50);
