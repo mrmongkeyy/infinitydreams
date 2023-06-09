@@ -42,11 +42,15 @@ module.exports = {
 							width:50%;
 						}
 						.right{
-							width:96%;
+							width:100%;
 							flex-direction:column;
 							align-items:center;
 							display:flex;
-							padding:2%;
+							height:100%;
+							justify-content:center;
+						}
+						.topBorder{
+							display:none;
 						}
 						.container{
 							margin:20px;
@@ -80,16 +84,13 @@ module.exports = {
 							font-size:25px;
 						}
 						.insideleft{
-							height:80%;
 							width:50%;
 							display:flex;
 							overflow:auto;
 							flex-direction:row;
 							align-items:center;
 							justify-content:space-between;
-							scrollbar-width:none;
 							background:white;
-							border-radius:10px;
 							box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 						}
 						.insideleft span img{
@@ -116,6 +117,7 @@ module.exports = {
 							flex-direction:row;
 							align-items:center;
 							justify-content:flex-start;
+							
 						}
 						.insideright nav{
 							display:flex;
@@ -192,6 +194,7 @@ module.exports = {
 							.right{
 								width:100%;
 								padding:0;
+								height:auto;
 							}
 							.insideleft{
 								flex-direction:column;
@@ -199,6 +202,11 @@ module.exports = {
 							}
 							.insideright{
 								width:95%;
+								height:100%;
+								box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
+							}
+							.topBorder{
+								display:flex;
 							}
 							.insideleft .container{
 							}
@@ -212,7 +220,7 @@ module.exports = {
 							.insideright{
 								overflow:auto;
 								justify-content:flex-start;
-								background:#ffffffc2;
+								background:white;
 							}
 							.insideright nav div{
 								padding:0 10px 0 10px;
@@ -256,7 +264,7 @@ module.exports = {
 				<script src=/scripts?fn=infinityDreams></script>
 				<script>
 					window.onresize = ()=>{
-						location.reload();
+						//location.reload();
 					}
 				</script>
 			</html>

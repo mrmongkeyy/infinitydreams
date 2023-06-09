@@ -54,31 +54,21 @@ class Circle{
 const infinityDreams = {
 	pageSetup(){
 		const main = makeElement('main',{
+			style:`
+				display:flex;
+				flex-direction:column;
+				
+			`,
 			innerHTML:`
 				<div class='left' id=profileview>
-					<div
-						style="
-							width:100%;
-							height:100%;
-						"
-						>
-							<canvas
-							style="
-								width:100%;
-								height:100%;
-								background:wheat;
-								filter:blur(15px) contrast(15);
-							"
-							></canvas>
-						</div>
 					<div id=whitebox
 					style="
 						border-radius:20px;
 						display:flex;
 						justify-content:center;
 						height:100%;
-						position:absolute;
 						width:100%;
+						position:absolute;
 					"
 					>
 						<div class=container style=background:none;border:none;margin:0;>
@@ -121,7 +111,12 @@ const infinityDreams = {
 						</div></div>
 					</div>
 				</div>
-				<div class='right' id=projectview>
+				<div class='right' id=projectview
+				style="
+					position:absolute;
+					margin-top:200%;
+				"
+				>
 					<div class='insideright desktopmenu bottomBorder'
 					style="
 						position:sticky;top:0;
@@ -294,19 +289,38 @@ const infinityDreams = {
 							</div>
 						</div>
 					</div>
-					<div class="insideright topBorder">
-						<div id=copy>
+					<div
+					style="
+						background:none;
+						font-size:small;
+						font-weight:bold;
+						display:flex;
+						width:50%;
+						margin:10px 0;
+						justify-content:space-between;
+					"
+					>
+						<div>
 							<span>&copy 2023. MRMONGKEYY</span>
 						</div>
+						<div>
+							<span
+							style="
+								text-decoration:underline;
+								cursor:pointer;
+							"
+							id=backtopbutton
+							>Back on top</span>
+						</div>
 					</div>
-				</div>
-				<div class=pop>
-					
 				</div>
 			`,
 			onadded(){
 				find('#seemoreproject').onclick = ()=>{
 					find('#projectview').scrollIntoView({behavior:'smooth'});
+				}
+				find('#backtopbutton').onclick = ()=>{
+					find('#profileview').scrollIntoView({behavior:'smooth'});
 				}
 			}
 		});
@@ -701,4 +715,4 @@ const process = function(){
 	})
 	requestAnimationFrame(process);
 }
-init(50);
+//init(50);
