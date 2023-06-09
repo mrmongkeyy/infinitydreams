@@ -66,7 +66,7 @@ const infinityDreams = {
 							style="
 								width:100%;
 								height:100%;
-								background:white;
+								background:wheat;
 								filter:blur(15px) contrast(15);
 							"
 							></canvas>

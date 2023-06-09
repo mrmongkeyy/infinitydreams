@@ -16,11 +16,12 @@ module.exports = {
 							width:0;
 						}
 						body{
-							font-family:goodone;
+							font-family:cursive;
 							user-select:none;
 							-webkit-tap-highlight-color:transparent;
 							margin:0;
 							font-weight:normal;
+							background:#e4edff;
 						}
 						.side{
 							position:absolute;
