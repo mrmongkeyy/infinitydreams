@@ -288,6 +288,17 @@ const infinityDreams = {
 								<span>AKARA</span>
 							</div>
 						</div>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
+							<div>
+								<span>JS/NodeJs</span>
+							</div>
+							<span>
+								<img src=./file?fn=apicaboutshit.png>
+							</span>
+							<div>
+								<span>GMarket</span>
+							</div>
+						</div>
 					</div>
 					<div
 					style="
@@ -510,7 +521,8 @@ const infinityDreams = {
 				'https://ngomikajaudah.cyclic.app',
 				'https://metadope.cyclic.app',
 				'https://masbroprinting.cyclic.app',
-				'https://servicesakara.cyclic.app'
+				'https://servicesakara.cyclic.app',
+				'https://gemastore.cyclic.app'
 			];
 			location.href = hreflist[index];
 		}
