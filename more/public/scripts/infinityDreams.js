@@ -511,16 +511,16 @@ const infinityDreams = {
 			const hreflist = [
 				'https://hellodolphin.000webhostapp.com',
 				'https://hellodolphin.000webhostapp.com/quizyzz',
-				'https://mrx.cyclic.app',
+				'https://github.com/mrmongkeyy/mrx',
 				'https://github.com/mrmongkeyy/gamastudio',
 				'https://github.com/mrmongkeyy/eagleswar',
 				'https://github.com/mrmongkeyy/bananaconsole',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/infinityRoads',
 				'https://github.com/mrmongkeyy/bananaconsole/tree/main/faraway',
-				'https://nontonajaudah.cyclic.app',
-				'https://ngomikajaudah.cyclic.app',
-				'https://metadope.cyclic.app',
-				'https://masbroprinting.cyclic.app',
+				'https://github.com/mrmongkeyy/bananamovies',
+				'https://github.com/gemasajaa/bacaajaudah',
+				'https://github.com/mrmongkeyy/dope',
+				'https://github.com/mrmongkeyy/masbroapp',
 				'https://servicesakara.cyclic.app',
 				'https://gemastore.cyclic.app'
 			];
