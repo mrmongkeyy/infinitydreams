@@ -299,6 +299,28 @@ const infinityDreams = {
 								<span>GMarket</span>
 							</div>
 						</div>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
+							<div>
+								<span>PHP / CI 3</span>
+							</div>
+							<span>
+								<img src=./file?fn=cegongshop.png>
+							</span>
+							<div>
+								<span>CegongShop</span>
+							</div>
+						</div>
+						<div class=container style=background:white;height:auto;width:80%;border:none;background:none;>
+							<div>
+								<span>BananaConsole.js</span>
+							</div>
+							<span>
+								<img src=./file?fn=tarikjendral.png>
+							</span>
+							<div>
+								<span>Tarik Jendral</span>
+							</div>
+						</div>
 					</div>
 					<div
 					style="
@@ -515,14 +537,16 @@ const infinityDreams = {
 				'https://github.com/mrmongkeyy/gamastudio',
 				'https://github.com/mrmongkeyy/eagleswar',
 				'https://github.com/mrmongkeyy/bananaconsole',
-				'https://github.com/mrmongkeyy/bananaconsole/tree/main/infinityRoads',
-				'https://github.com/mrmongkeyy/bananaconsole/tree/main/faraway',
+				'https://mrmongkeyy.github.io/bananaconsole/infinityRoads',
+				'https://mrmongkeyy.github.io/bananaconsole/faraway',
 				'https://github.com/mrmongkeyy/bananamovies',
 				'https://github.com/gemasajaa/bacaajaudah',
 				'https://github.com/mrmongkeyy/dope',
 				'https://github.com/mrmongkeyy/masbroapp',
 				'https://servicesakara.cyclic.app',
-				'https://gemastore.cyclic.app'
+				'https://github.com/mrmongkeyy/gemastorev2',
+				'https://cegongshop.my.id/',
+				'https://mrmongkeyy.github.io/tarikjendral'
 			];
 			location.href = hreflist[index];
 		}

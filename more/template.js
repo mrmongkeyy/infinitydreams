@@ -125,7 +125,6 @@ module.exports = {
 							align-items:center;
 						}
 						.insideright nav div{
-							padding: 20px 0 20px 0;
 							font-size:15px;
 							cursor:pointer;
 							text-align:center;
@@ -152,6 +151,10 @@ module.exports = {
 							padding:10px;
 							position:sticky;
 							top:0;
+							left:0;
+							background:white;
+							border-radius:10px 0;
+							border:2px solid lightgray;
 						}
 						.smallfont{
 							font-weight:normal;
@@ -163,7 +166,6 @@ module.exports = {
 							left:0;
 							width:100%;
 							height:100%;
-							background:RGB(255,255,255,0.6);
 						}
 						.bound .box-flex{
 							border-radius:10px;
@@ -201,8 +203,9 @@ module.exports = {
 								width:95%;
 							}
 							.insideright{
-								width:95%;
+								width:100%;
 								height:100%;
+								flex-direction:column;
 								box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px, rgba(0, 0, 0, 0.14) 0px 2px 2px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px;
 							}
 							.topBorder{
@@ -225,8 +228,16 @@ module.exports = {
 							.insideright nav div{
 								padding:0 10px 0 10px;
 							}
+							.insideright nav{
+								height:54px;
+								border-top:1px solid lightgray;
+								width:100%;
+								overflow:auto;
+								font-weight:bold;
+							}
 							#titleMobile{
 								display:inline-block;
+								border:0;
 							}
 							.box{
 								width:100%;
@@ -254,7 +265,8 @@ module.exports = {
 								height:80%;
 							}
 							.box-flex{
-								width:100%;
+								max-width:80%;
+								width:auto;
 							}
 						}
 					</style>
